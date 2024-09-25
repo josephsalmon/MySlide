@@ -1,4 +1,4 @@
 
-# Notes from a data witch
+# Slideshow gallery
 
-Source code for my data science blog: https://blog.djnavarro.net
+Source code for my slideshow gallery https://josephsalmon.eu/slides
