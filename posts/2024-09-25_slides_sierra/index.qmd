@@ -11,7 +11,6 @@ format:
     highlight-style: a11y
 
 
-
 ---
 
 #### {#title-slide data-menu-title="Title Slide" background="#053660"}
@@ -51,8 +50,7 @@ format:
 ::::
 
 
-
-### Flower power in Montpellier {.large-header}
+### {{< iconify iconoir:flower >}}  Flower power in Montpellier {{< iconify iconoir:flower >}}  {.large-header}
 <hr>
 
 
@@ -154,7 +152,7 @@ A **citizen science** platform using machine learning to help people identify pl
 
 
 
-### Pl@ntNet: Usage and popularity
+### {{< iconify hugeicons:chatting-01 >}} Pl@ntNet: usage and popularity
 <hr>
 
 :::: {.columns}
@@ -188,7 +186,7 @@ A **citizen science** platform using machine learning to help people identify pl
 
 
 <!-- ----------------------------------------------------------------------- -->
-###  Pl@ntNet & Cooperative Learning
+### Pl@ntNet & Cooperative Learning
 
 <div style="text-align: center;">
 
@@ -197,39 +195,173 @@ A **citizen science** platform using machine learning to help people identify pl
 </div>
 <!-- ----------------------------------------------------------------------- -->
 
+
 <!-- ----------------------------------------------------------------------- -->
-### {{< fa graduation-cap title="graduation cap" >}} Enseignants
+### {{< iconify eos-icons:science >}} Scientific challenges
 <hr>
 
-
-::: {.fragment fragment-index=1}
-- **Joseph Salmon** : CM et TP
-    - Situation actuelle : Professeur à l'Université de Montpellier
-    - Précédemment : Paris Diderot-Paris 7, Duke Univ., Télécom ParisTech, Univ. Washington
-    - Spécialités : statistiques, optimisation, traitement des images, sciences participatives>
-    - Bureau : 415, Bat. 9
-:::
-<div style="line-height:4%;">
 <br>
-</div>
 
-::: {.fragment fragment-index=2}
-- **Benjamin Charlier** : CM, TD et TP
-  - Situation actuelle : Maître de conférences à l'Université de Montpellier
-  - Précédemment : Université Paul Sabatier, ENS Paris-Saclay
-  - Spécialités : traitement des images, statistiques, différentiation automatique
-  - Bureau : 423, Bat. 9
-:::
+[**Motivation**]{.underline}: excellent app ... but not a perfect app; **How to improve?**
+
+
+- Community effort: machine learning, ecology, engineering, amateurs</li>
+- Many open problems (theoretical/practical)</li>
+- Need for methodological/computational breakthrough</li>
+
+**Note:** I am mostly innocent; started working with the Pl@ntNet team in 2020
 <!-- ----------------------------------------------------------------------- -->
 
 
+**Note:** I am mostly innocent; started working with the Pl@ntNet team in 2020
+<!-- ----------------------------------------------------------------------- -->
 
-## Contributions {.section-background-small}
+# Contributions {.section-background}
+
+
+<!-- ----------------------------------------------------------------------- -->
+### Associated personal contributions
+
+:::: {.columns }
+
+::: {.column width="61%"}
+
+- **Pl@ntNet-300K** [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean_Salmon21]: Creation and **release** of a large-scale dataset sharing the same property as Pl@ntNet; available for the community to improve learning systems
+
+:::
+
+::: {.column width="29%"}
+
+
+<img src="images/sample_genus.svg" width="72%" align="middle">
+
+:::
+
+::::
+
+::: fragment
+
+:::: columns
+
+::: {.column width="61%"}
+
+- **Learning & crowd-sourced data** [@Lefort_Charlier_Joly_Salmon22]: How to leverage multiple labels per image to improve the model? Need to **assert quality**: the workers, the images/labels, the model, etc.
+
+:::
+
+::: {.column width="29%"}
+
+<img src="images/fullpipeline_small.svg" width="72%" align="middle">
+
+:::
+
+::::
+
+:::
+
+::: fragment
+
+:::: columns
+
+::: {.column width="61%"}
+
+- **Top-K learning** [@Garcin_Servajean_Joly_Salmon22]: Driven by theory, introduce new loss to cope with Pl@ntNet constraints to **output multiple labels** (e.g., UX, Deep Learning framework, etc.)
+
+:::
+
+::: {.column width="29%"}
+
+<img src="images/LossGarcin_k=2_9_margin_5.svg" width="72%" align="middle">
+
+:::
+
+::::
+
+:::
 
 
 
+## Dataset release: Pl@ntNet-300K {.section-background-small}
 
-## Dataset release {.section-background-small}
+
+### A need for new benchmarks
+
+Popular datasets limitations:
+
+- structure of label too simplistic (CIFAR-10, CIFAR-100)
+- might be too clean (tasks easy to discriminate)
+- might be too well-balanced (same number of images per class)
+
+**[Motivation]{.underline}**:
+
+release a large-scale dataset **sharing similar features** as the Pl@ntNet dataset to foster research in plant identification $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean_Salmon21]
+
+
+## Asymmetry of errors in Pl@ntNet
+
+
+### Intra-class variability
+
+::: {layout-nrow=2}
+
+![Guizotia abyssinica](images/6_a.jpg){cap-location="top"}
+
+![Diascia rigescens](images/7_a.jpg)
+
+![Lapageria rosea](images/8_a.jpg)
+
+![Casuarina cunninghamiana](images/9_a.jpg)
+
+![Freesia alba](images/10_a.jpg)
+
+![Guizotia abyssinica](images/6_b.jpg)
+
+![Diascia rigescens](images/7_b.jpg)
+
+![Lapageria rosea](images/8_b.jpg)
+
+![Casuarina cunninghamiana](images/9_b.jpg)
+
+![Freesia alba](images/10_b.jpg)
+
+:::
+
+<div style="text-align: center; margin-top: 20px;">
+  <strong>Based on pictures only, plant species are challenging to discriminate!</strong>
+</div>
+
+
+### Inter-class ambiguity
+
+::: {layout-nrow=2}
+
+![Cirsium rivulare](images/1_a.jpg)
+
+![Chaerophyllum aromaticum](images/2_a.jpg)
+
+![Conostomium kenyense](images/3_a.jpg)
+
+![Adenostyles leucophylla](images/4_a.jpg)
+
+![Sedum montanum](images/5_a.jpg)
+
+![Cirsium tuberosum](images/1_b.jpg)
+
+![Chaerophyllum temulum](images/2_b.jpg)
+
+![Conostomium quadrangulare](images/3_b.jpg)
+
+![Adenostyles alliariae](images/4_b.jpg)
+
+![Sedum rupestre](images/5_b.jpg)
+
+:::
+
+
+<div style="text-align: center; margin-top: 20px;">
+  <strong>Based on pictures only, plant species are challenging to discriminate!</strong>
+</div>
+
 
 
 <!-- ----------------------------------------------------------------------- -->
