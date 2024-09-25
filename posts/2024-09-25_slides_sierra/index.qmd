@@ -11,9 +11,10 @@ format:
     highlight-style: a11y
 
 
+
 ---
 
-### {#title-slide data-menu-title="Title Slide" background="#053660"}
+#### {#title-slide data-menu-title="Title Slide" background="#053660"}
 
 [Citizen science for plant identification: insights from Pl@ntnet]{.custom-title}
 
@@ -27,7 +28,6 @@ format:
 [Joseph Salmon]{.custom-subtitle2}
 
 [IMAG, Univ Montpellier, CNRS, Montpellier]{.custom-subtitle3}
-
 
 [Institut Universitaire de France (IUF)]{.custom-subtitle3}
 
@@ -51,7 +51,8 @@ format:
 ::::
 
 
-## Flower power in Montpellier
+
+### Flower power in Montpellier {.large-header}
 <hr>
 
 
@@ -69,7 +70,7 @@ Mainly joint work with:
 
 :::
 
-::: {.column width="40%" align="center" style='display: flex; justify-content: center; align-items: center;'}
+::: {.column  align="center" style='display: flex; justify-content: center; align-items: center;'}
 and from
 :::
 
@@ -87,7 +88,7 @@ and from
 
 :::
 
-::: {.column width="40%" align="center" style='display: flex; justify-content: center; align-items: center;'}
+::: {.column align="center" style='display: flex; justify-content: center; align-items: center;'}
 ![](images/plantnet-logo-title.26755cd.svg){width=100%}
 :::
 
@@ -96,10 +97,6 @@ and from
 :::
 
 ::::
-
-
-
-
 
 - **Pierre Bonnet** (CIRAD, AMAP)
 - **Antoine Affouard**, **J-C. Lombardo**, **Titouan Lorieul**, **Mathias Chouet** (Inria, LIRMM, Univ. Montpellier)
@@ -112,7 +109,7 @@ and from
 
 
 
-## Pl@ntNet:  ML for citizen science
+### Pl@ntNet:  ML for citizen science
 <hr>
 
 ::::{.columns}
@@ -157,7 +154,7 @@ A **citizen science** platform using machine learning to help people identify pl
 
 
 
-## Pl@ntNet: Usage and popularity
+### Pl@ntNet: Usage and popularity
 <hr>
 
 :::: {.columns}
@@ -191,7 +188,7 @@ A **citizen science** platform using machine learning to help people identify pl
 
 
 <!-- ----------------------------------------------------------------------- -->
-##  Pl@ntNet & Cooperative Learning
+###  Pl@ntNet & Cooperative Learning
 
 <div style="text-align: center;">
 
@@ -201,7 +198,7 @@ A **citizen science** platform using machine learning to help people identify pl
 <!-- ----------------------------------------------------------------------- -->
 
 <!-- ----------------------------------------------------------------------- -->
-## {{< fa graduation-cap title="graduation cap" >}} Enseignants
+### {{< fa graduation-cap title="graduation cap" >}} Enseignants
 <hr>
 
 
@@ -227,138 +224,16 @@ A **citizen science** platform using machine learning to help people identify pl
 
 
 
-<!-- ----------------------------------------------------------------------- -->
-## {{< fa globe title="laptop code" >}} Ressources en ligne
-<hr>
+## Contributions {.section-background-small}
 
 
-<br>
 
-[Informations principales]{.underline} : site du cours <http://josephsalmon.github.io/HAX603X>
 
-<br>
-
-:::{.incremental}
-
-- Syllabus
-- Cours (détaillé: site web)
-- Slides (résumé)
-- Feuilles de TD
-- Feuilles de TP
-- Rendu TP : Moodle de l'université (https://moodle.umontpellier.fr/course/view.php?id=5558)
-
-:::
-<!-- ----------------------------------------------------------------------- -->
-
+## Dataset release {.section-background-small}
 
 
 <!-- ----------------------------------------------------------------------- -->
-## {{< fa clipboard-list title="Clipboard list" >}} Validation
-<hr>
-
-- TP notés : Rendu = fichier Python **.py** unique
-
-   - TP noté 1 : rendre en fin de session (en S11)
-   - TP noté 2 : rendre en fin de session (en S17)
-
-- CC : devoir sur table d'une heure (S18)
-
-<br>
-
-- Coefficients:
-    - Note Session 1 : (40% CC + 30% TP 1 + 30% TP 2)
-    - Note Session 2 : (30% CC + 35% TP 1 + 35% TP 2)
-
-::: {.callout-important}
-
-
-Le rendu est individuel pour le TP noté !!!
-:::
-<!-- ----------------------------------------------------------------------- -->
-
-
-## {{< fa laptop title="Computer" >}} Notation pour les TPs
-<hr>
-
-
-[Rendu]{.underline} : sur Moodle, en déposant un fichier nom_prenom.py
-dans le dossier adéquat.
-
-Détails de la notation des TPs :
-
-- Qualité des réponses aux questions
-- Qualité de rédaction et d'orthographe
-- Qualité des graphiques (légendes, couleurs)
-- Qualité du code (noms de variables, clairs, commentaires utiles, code synthétique, etc.)
-- Code reproductible et absence de bug
-
-<br>
-
-::: {.callout-important}
-
-## [Pénalités]{.underline}
-
-
-- Envoi par mail : zéro
-- Retard : zéro (uploader avant la fin, fermeture automatique de moodle)
-
-:::
-<!-- ----------------------------------------------------------------------- -->
-
-
-
-
-<!-- ----------------------------------------------------------------------- -->
-## Prérequis - à revoir seul
-<hr>
-
-:::{.incremental}
-<br>
-<br>
-
-- Bases de probabilités (en particulier "HAX506X - Théorie des Probabilités"): probabilité, densité, espérance, fonction de répartition, mesure, intégration, analyse numérique élémentaire, etc. [@Foata_Fuchs96;@Barbe_Ledoux06;@Ouvrard07;@Ouvrard08]
-
-<br>
-
-- Programmation élémentaire (en Python): if ... then... else ..., for, while, fonctions, etc. [HLMA310 - Logiciels scientifiques](https://josephsalmon.eu/HLMA310.html), [@Courant_deFalco_Gonnord_Filliatre_Conchon_Dowek_Wack13], [Cours de Python: Univ. Paris Diderot](https://python.sdv.univ-paris-diderot.fr/)
-
-<br>
-
-- Pour aller plus loin: conditionnement, martingales [@Williams91]
-
-:::
-<!-- ----------------------------------------------------------------------- -->
-
-
-
-
-<!-- ----------------------------------------------------------------------- -->
-## Description du cours HAX603X
-<hr>
-
-:::{.incremental}
-
-1. Générer l’aléa
-   - générateurs pseudo-aléatoires, simulations de variables aléatoires (inverse, rejet, etc.)
-   - illustrations numériques et visualisation en Python (loi des grands nombres, TCL)
-2. Méthode de Monte-Carlo
-   - méthode de Monte-Carlo pour le calcul approché d’une intégrale
-   - réduction de la variance : variables antithétiques, variables de contrôle, etc.
-3. Compléments
-   - vecteurs gaussiens et lien avec les lois usuelles de la statistique inférentielle (student, chi2)
-   - construction d'intervalles de confiance.
-   - marche aléatoire simple, etc.
-:::
-<!-- ----------------------------------------------------------------------- -->
-
-
-# Perspectives historiques
-
-
-
-
-<!-- ----------------------------------------------------------------------- -->
-## {#contact data-menu-title="Contact"}
+### {#contact data-menu-title="Contact"}
 ![](https://raw.githubusercontent.com/josephsalmon/OrganizationFiles/master/inkscape/images/contact_js.svg)
 
 <br>
@@ -370,11 +245,11 @@ Détails de la notation des TPs :
 
 
 
-# Bibliographie
+# Bibliographie {.section-background}
 
 
 <!-- ----------------------------------------------------------------------- -->
-## Liste de livres
+### References
 <hr>
 
 ::: {#refs}

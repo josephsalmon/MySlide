@@ -79,8 +79,16 @@ hr {
   background-color: teal !important;
   font-family: $font-family-sans-serif;
   color: white !important;
-
+  font-size: 1.4em;
   }
+
+
+.section-background-small {
+    background-color: teal !important;
+    font-family: $font-family-sans-serif;
+    color: white !important;
+    font-size: 1.2em;
+    }
 
   .reveal section h1 {
     color: white !important;
@@ -109,7 +117,12 @@ h3{
   font-weight: 600;
 }
 
-
+.reveal h3 {
+  font-family: $font-family-sans-serif;
+  color: $teal;
+  font-size: 2em;
+  font-weight: 600;
+}
 
 .subtitle {
   color: teal !important;

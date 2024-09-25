@@ -60,11 +60,11 @@ format:
       controls: false
       code-annotations: select
       css: ../slides.css
-      incremental: false   
+      incremental: false 
 
 editor:
   render-on-save: true
-slide-level: 2
+slide-level: 3
 title-slide-attributes:
   center-title-slide: true
 # execute:
