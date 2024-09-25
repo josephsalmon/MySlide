@@ -1,0 +1,22 @@
+# Internal slide decks
+- title: "Pl@ntnet & citizen science"
+  subtitle: "Talk on Pl@ntnet and questions on citizen science"
+  # author: "Joseph Salmon"
+  date: 2024-09-25
+  image: posts/2024-09-25_slides_sierra/images/plantnet_schema_global_js.svg
+  path: 2024-09-25_slides_sierra/index.qmd
+  categories:
+   - citizen sciences
+   - crowdsourcing
+   - labeling
+- title: "Update on slideshow gallery"
+  subtitle: "I've decided the time has come to refresh my talk gallery.
+Hope you'll like it."
+  # author: "Joseph Salmon"
+  date: 2024-09-25
+  image: posts/2024-09-25_slides/images/Celting_knot_color.svg
+  path: 2024-09-25_slides/index.qmd
+  categories:
+   - revealjs
+   - slides
+   - quarto

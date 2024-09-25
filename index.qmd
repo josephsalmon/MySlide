@@ -1,0 +1,22 @@
+---
+title: "Slideshow gallery"
+listing:
+  contents:
+    - "metadata.yml"
+  feed: true
+  # contents: posts
+  sort: "date desc"
+  type: grid
+  grid-columns: 3
+  image-height: 100%
+  page-size: 100
+  categories: true
+page-layout: full
+title-block-banner: true
+# image: profile_hex.jpg
+# header-includes: >
+#   <link rel="stylesheet" href="listing-default.css">
+# resources:
+#   - listing-default.css
+---
+

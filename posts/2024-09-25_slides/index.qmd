@@ -1,0 +1,53 @@
+---
+description: |
+  I have reluctantly decided to create a gallery of slides blog.
+date: "2024-09-25"
+categories: [Blogging, Slides, Revealjs]
+image: "Celting_knot_color.svg"
+image-alt: "Celting knot with partial coloring"
+format:
+  revealjs:
+    # preview-links: true
+    code-link: true
+    highlight-style: a11y
+---
+
+
+### {#title-slide data-menu-title="Title Slide" background="#053660"}
+
+[Citizen science for plant identification: insights from Pl@ntnet]{.custom-title}
+
+<br>  
+
+<!-- <hr class="hr-teal"> -->
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[Joseph Salmon]{.custom-subtitle2}
+
+[IMAG, Univ Montpellier, CNRS, Montpellier]{.custom-subtitle3}
+
+
+[Institut Universitaire de France (IUF)]{.custom-subtitle3}
+
+:::
+
+::: {.column width="40%" }
+<div style="text-align: center;">
+
+
+![](../../images/logo_um_2022_rouge_RVB.svg){width=61%}
+![](../../images/LogoIUF.svg){width=61%} <!-- Incrementally added -->
+
+::: {.fragment}
+![](../../images/arrow_nunito.svg){width=61%}
+![](../../images/inr_logo_rouge.svg){width=61%} <!-- Incrementally added -->
+:::
+</div>
+:::
+
+
+::::
+
+

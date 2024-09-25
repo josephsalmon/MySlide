@@ -1,0 +1,40 @@
+project:
+  type: website
+  resources:
+    - CNAME
+
+website:
+  title: "Slides (Joseph Salmon)"
+  description: "A gallery of slides"
+  site-url: https://josephsalmon.eu
+  repo-url: https://github.com/josephsalmon/slides
+  open-graph: true
+  search: true
+  favicon: Flag_of_Occitania.svg
+  navbar:
+    # title: false
+    logo: Flag_of_Occitania.svg
+    logo-alt: "Home" #doesn't seem to show up
+    tools:
+      - icon: github
+        href: https://www.github.com/josephsalmon/slides
+
+    # background: "#eee"
+  page-footer:
+    center:
+      - href: https://josephsalmon.eu
+        text: josephsalmon.eu
+
+format: 
+  html:
+    theme:
+      light:
+        - cosmo
+        # - superhero
+        - silvia-theme.scss
+        # - silvia/colors.scss
+        - silvia/fonts.scss
+    highlight-style: a11y
+    code-link: true
+
+
