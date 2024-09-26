@@ -14,6 +14,7 @@ format:
 
 ---
 
+<!-- ----------------------------------------------------------------------- -->
 #### {#title-slide data-menu-title="Title Slide" background="#053660"}
 
 [Citizen science for plant identification: insights from Pl@ntnet]{.custom-title}
@@ -47,10 +48,11 @@ format:
 </div>
 :::
 
-
 ::::
+<!-- ----------------------------------------------------------------------- -->
 
 
+<!-- ----------------------------------------------------------------------- -->
 ### {{< iconify iconoir:flower >}}  Flower power in Montpellier {{< iconify iconoir:flower >}}  {.large-header}
 <hr>
 
@@ -99,15 +101,17 @@ and from
 
 - **Pierre Bonnet** (CIRAD, AMAP)
 - **Antoine Affouard**, **Jean-Christophe Lombardo**, **Titouan Lorieul**, **Mathias Chouet** (Inria, LIRMM, Univ. Montpellier)
+<!-- ----------------------------------------------------------------------- -->
 
 
 
-
+<!-- ----------------------------------------------------------------------- -->
 # Pl@ntNet description {.section-background}
+<!-- ----------------------------------------------------------------------- -->
 
 
 
-
+<!-- ----------------------------------------------------------------------- -->
 ### Pl@ntNet:  ML for citizen science
 <hr>
 
@@ -122,10 +126,12 @@ A **citizen science** platform using machine learning to help people identify pl
 :::
 
 ::::
+<!-- ----------------------------------------------------------------------- -->
 
 
 
 
+<!-- ----------------------------------------------------------------------- -->
 ::::{.columns style='display: flex !important'}
 
 ::: {.column width="65%"}
@@ -150,9 +156,11 @@ A **citizen science** platform using machine learning to help people identify pl
 :::
 
 ::::
+<!-- ----------------------------------------------------------------------- -->
 
 
 
+<!-- ----------------------------------------------------------------------- -->
 ### {{< iconify hugeicons:chatting-01 >}} Pl@ntNet: usage and popularity
 <hr>
 
@@ -183,6 +191,7 @@ A **citizen science** platform using machine learning to help people identify pl
 <img src="images/plantnet_usage_rasterized.svg" width="84%" align="middle" >
 
 </div>
+<!-- ----------------------------------------------------------------------- -->
 
 
 
@@ -196,12 +205,15 @@ A **citizen science** platform using machine learning to help people identify pl
 </div>
 <!-- ----------------------------------------------------------------------- -->
 
+
+
 <!-- ----------------------------------------------------------------------- -->
 ### {{< iconify vaadin:hourglass-start >}} Chronology of Pl@ntNet
 
 <br>
 
 <img src="images/PlantNet-overview-Janv-2022_js.svg" width="90%" align="middle" >
+<!-- ----------------------------------------------------------------------- -->
 
 
 
@@ -221,7 +233,9 @@ A **citizen science** platform using machine learning to help people identify pl
 <!-- ----------------------------------------------------------------------- -->
 
 
+<!-- ----------------------------------------------------------------------- -->
 # Contributions {.section-background}
+<!-- ----------------------------------------------------------------------- -->
 
 
 <!-- ----------------------------------------------------------------------- -->
@@ -289,12 +303,16 @@ A **citizen science** platform using machine learning to help people identify pl
 ::::
 
 :::
+<!-- ----------------------------------------------------------------------- -->
 
 
 
+<!-- ----------------------------------------------------------------------- -->
 ## Dataset release: Pl@ntNet-300K {.section-background-small}
+<!-- ----------------------------------------------------------------------- -->
 
 
+<!-- ----------------------------------------------------------------------- -->
 ### {{<iconify gravity-ui:magnifier>}} A need for new benchmarks
 <hr>
 <br>
@@ -311,9 +329,11 @@ A **citizen science** platform using machine learning to help people identify pl
 release a large-scale dataset **sharing similar features** as the Pl@ntNet dataset to foster research in plant identification
 
 $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean_Salmon21]
+<!-- ----------------------------------------------------------------------- -->
 
 
 
+<!-- ----------------------------------------------------------------------- -->
 ### Intra-class variability
 
 ::: {layout-nrow=2}
@@ -343,7 +363,11 @@ $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean
 <center>
 **Based on pictures only, plant species are challenging to discriminate!**
 </center>
+<!-- ----------------------------------------------------------------------- -->
 
+
+
+<!-- ----------------------------------------------------------------------- -->
 ### Inter-class ambiguity
 
 
@@ -374,12 +398,16 @@ $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean
 <center>
 **Based on pictures only, plant species are challenging to discriminate!**
 </center>
+<!-- ----------------------------------------------------------------------- -->
 
 
+<!-- ----------------------------------------------------------------------- -->
 ## Sampling bias {.section-background-small}
+<!-- ----------------------------------------------------------------------- -->
 
+
+<!-- ----------------------------------------------------------------------- -->
 ### {{<iconify gis:globe-earth-alt>}} Geographic bias
-
 
 
 <div style="display: flex; flex-direction: column;">
@@ -387,9 +415,11 @@ $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean
 
 <center>Spatial density of images collected by Pl@ntNet (13/04/2024)</center>
 </div>
+<!-- ----------------------------------------------------------------------- -->
 
 
 
+<!-- ----------------------------------------------------------------------- -->
 ### {{<iconify fluent:food-20-filled>}} Food bias 
 <hr>
 
@@ -436,8 +466,6 @@ Top-5 most observed plant species in Pl@ntNet (13/04/2024):
 :::
 
 
-
-
 ::: {.column width="44%" style='text-align: center;'}
 
 **6 obs.**
@@ -448,9 +476,11 @@ Top-5 most observed plant species in Pl@ntNet (13/04/2024):
 :::
 
 ::::
+<!-- ----------------------------------------------------------------------- -->
 
 
 
+<!-- ----------------------------------------------------------------------- -->
 
 ### {{<iconify emojione-monotone:straight-ruler>}} Size bias
 <hr>
@@ -490,8 +520,11 @@ Top-5 most observed plant species in Pl@ntNet (13/04/2024):
 :::
 
 ::::
+<!-- ----------------------------------------------------------------------- -->
 
-
+<!-- ----------------------------------------------------------------------- -->
+## Pl@ntNet-300K construction {.section-background-small}
+<!-- ----------------------------------------------------------------------- -->
 
 
 
