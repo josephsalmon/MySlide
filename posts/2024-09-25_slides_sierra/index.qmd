@@ -9,6 +9,7 @@ format:
     # preview-links: true
     code-link: true
     highlight-style: a11y
+    center: true
 
 
 ---
@@ -97,7 +98,7 @@ and from
 ::::
 
 - **Pierre Bonnet** (CIRAD, AMAP)
-- **Antoine Affouard**, **J-C. Lombardo**, **Titouan Lorieul**, **Mathias Chouet** (Inria, LIRMM, Univ. Montpellier)
+- **Antoine Affouard**, **Jean-Christophe Lombardo**, **Titouan Lorieul**, **Mathias Chouet** (Inria, LIRMM, Univ. Montpellier)
 
 
 
@@ -195,12 +196,19 @@ A **citizen science** platform using machine learning to help people identify pl
 </div>
 <!-- ----------------------------------------------------------------------- -->
 
+<!-- ----------------------------------------------------------------------- -->
+### {{< iconify vaadin:hourglass-start >}} Chronology of Pl@ntNet
+
+<br>
+
+<img src="images/PlantNet-overview-Janv-2022_js.svg" width="90%" align="middle" >
+
+
 
 <!-- ----------------------------------------------------------------------- -->
 ### {{< iconify eos-icons:science >}} Scientific challenges
 <hr>
 
-<br>
 
 [**Motivation**]{.underline}: excellent app ... but not a perfect app; **How to improve?**
 
@@ -213,18 +221,18 @@ A **citizen science** platform using machine learning to help people identify pl
 <!-- ----------------------------------------------------------------------- -->
 
 
-**Note:** I am mostly innocent; started working with the Pl@ntNet team in 2020
-<!-- ----------------------------------------------------------------------- -->
-
 # Contributions {.section-background}
 
 
 <!-- ----------------------------------------------------------------------- -->
-### Associated personal contributions
+### {{<iconify weui:me-filled>}} Associated personal contributions
+<hr>
+
+<br>
 
 :::: {.columns }
 
-::: {.column width="61%"}
+::: {.column width="68%"}
 
 - **Pl@ntNet-300K** [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean_Salmon21]: Creation and **release** of a large-scale dataset sharing the same property as Pl@ntNet; available for the community to improve learning systems
 
@@ -232,8 +240,9 @@ A **citizen science** platform using machine learning to help people identify pl
 
 ::: {.column width="29%"}
 
-
-<img src="images/sample_genus.svg" width="72%" align="middle">
+<center>
+<img src="images/sample_genus.svg" width="62%" align="middle">
+</center>
 
 :::
 
@@ -243,15 +252,16 @@ A **citizen science** platform using machine learning to help people identify pl
 
 :::: columns
 
-::: {.column width="61%"}
+::: {.column width="68%"}
 
 - **Learning & crowd-sourced data** [@Lefort_Charlier_Joly_Salmon22]: How to leverage multiple labels per image to improve the model? Need to **assert quality**: the workers, the images/labels, the model, etc.
 
 :::
 
 ::: {.column width="29%"}
-
-<img src="images/fullpipeline_small.svg" width="72%" align="middle">
+<center>
+<img src="images/fullpipeline_small.svg" width="78%" align="middle">
+</center>
 
 :::
 
@@ -263,15 +273,16 @@ A **citizen science** platform using machine learning to help people identify pl
 
 :::: columns
 
-::: {.column width="61%"}
+::: {.column width="68%"}
 
 - **Top-K learning** [@Garcin_Servajean_Joly_Salmon22]: Driven by theory, introduce new loss to cope with Pl@ntNet constraints to **output multiple labels** (e.g., UX, Deep Learning framework, etc.)
 
 :::
 
 ::: {.column width="29%"}
-
-<img src="images/LossGarcin_k=2_9_margin_5.svg" width="72%" align="middle">
+<center>
+<img src="images/LossGarcin_k=2_9_margin_5.svg" width="78%" align="middle">
+</center>
 
 :::
 
@@ -284,83 +295,204 @@ A **citizen science** platform using machine learning to help people identify pl
 ## Dataset release: Pl@ntNet-300K {.section-background-small}
 
 
-### A need for new benchmarks
+### {{<iconify gravity-ui:magnifier>}} A need for new benchmarks
+<hr>
+<br>
+**Popular datasets limitations:**
 
-Popular datasets limitations:
+- structure of labels too simplistic (CIFAR-10, CIFAR-100)
+  - might have tasks too easy to discriminate
+  - might be too well-balanced (same number of images per class)
+- contains duplicate, low-quality, or irrelevant images
 
-- structure of label too simplistic (CIFAR-10, CIFAR-100)
-- might be too clean (tasks easy to discriminate)
-- might be too well-balanced (same number of images per class)
 
 **[Motivation]{.underline}**:
 
-release a large-scale dataset **sharing similar features** as the Pl@ntNet dataset to foster research in plant identification $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean_Salmon21]
+release a large-scale dataset **sharing similar features** as the Pl@ntNet dataset to foster research in plant identification
 
+$\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean_Salmon21]
 
-## Asymmetry of errors in Pl@ntNet
 
 
 ### Intra-class variability
 
 ::: {layout-nrow=2}
 
-![Guizotia abyssinica](images/6_a.jpg){cap-location="top"}
+![Guizotia abyssinica](images/6_a.jpg){width=93%}
 
-![Diascia rigescens](images/7_a.jpg)
+![Diascia rigescens](images/7_a.jpg){width=93%}
 
-![Lapageria rosea](images/8_a.jpg)
+![Lapageria rosea](images/8_a.jpg){width=93%}
 
-![Casuarina cunninghamiana](images/9_a.jpg)
+![Casuarina cunninghamiana](images/9_a.jpg){width=93%}
 
-![Freesia alba](images/10_a.jpg)
+![Freesia alba](images/10_a.jpg){width=93%}
 
-![Guizotia abyssinica](images/6_b.jpg)
+![Guizotia abyssinica](images/6_b.jpg){width=93%}
 
-![Diascia rigescens](images/7_b.jpg)
+![Diascia rigescens](images/7_b.jpg){width=93%}
 
-![Lapageria rosea](images/8_b.jpg)
+![Lapageria rosea](images/8_b.jpg){width=93%}
 
-![Casuarina cunninghamiana](images/9_b.jpg)
+![Casuarina cunninghamiana](images/9_b.jpg){width=93%}
 
-![Freesia alba](images/10_b.jpg)
+![Freesia alba](images/10_b.jpg){width=93%}
 
 :::
 
-<div style="text-align: center; margin-top: 20px;">
-  <strong>Based on pictures only, plant species are challenging to discriminate!</strong>
-</div>
-
+<center>
+**Based on pictures only, plant species are challenging to discriminate!**
+</center>
 
 ### Inter-class ambiguity
 
+
 ::: {layout-nrow=2}
 
-![Cirsium rivulare](images/1_a.jpg)
+![Cirsium rivulare](images/1_a.jpg){width=93%}
 
-![Chaerophyllum aromaticum](images/2_a.jpg)
+![Chaerophyllum aromaticum](images/2_a.jpg){width=93%}
 
-![Conostomium kenyense](images/3_a.jpg)
+![Conostomium kenyense](images/3_a.jpg){width=93%}
 
-![Adenostyles leucophylla](images/4_a.jpg)
+![Adenostyles leucophylla](images/4_a.jpg){width=93%}
 
-![Sedum montanum](images/5_a.jpg)
+![Sedum montanum](images/5_a.jpg){width=93%}
 
-![Cirsium tuberosum](images/1_b.jpg)
+![Cirsium tuberosum](images/1_b.jpg){width=93%}
 
-![Chaerophyllum temulum](images/2_b.jpg)
+![Chaerophyllum temulum](images/2_b.jpg){width=93%}
 
-![Conostomium quadrangulare](images/3_b.jpg)
+![Conostomium quadrangulare](images/3_b.jpg){width=93%}
 
-![Adenostyles alliariae](images/4_b.jpg)
+![Adenostyles alliariae](images/4_b.jpg){width=93%}
 
-![Sedum rupestre](images/5_b.jpg)
+![Sedum rupestre](images/5_b.jpg){width=93%}
+
+:::
+
+<center>
+**Based on pictures only, plant species are challenging to discriminate!**
+</center>
+
+
+## Sampling bias {.section-background-small}
+
+### {{<iconify gis:globe-earth-alt>}} Geographic bias
+
+
+
+<div style="display: flex; flex-direction: column;">
+![](images/plantnet_bias_geographic04_04_2024.png){width=100%}
+
+<center>Spatial density of images collected by Pl@ntNet (13/04/2024)</center>
+</div>
+
+
+
+### {{<iconify fluent:food-20-filled>}} Food bias 
+<hr>
+
+<br>
+
+Top-5 most observed plant species in Pl@ntNet (13/04/2024):
+
+<br>
+
+
+::: {layout-nrow=1  .v-center-container}
+**25134 obs.**
+![Echium vulgare L.](images/Echium_vulgare_L.jpeg){width=200px height=200px}
+*Echium vulgare L.*
+
+**24720 obs.**
+![Ranunculus ficaria L.](images/Ranunculus_ficaria_L.jpeg){width=200px height=200px}
+*Ranunculus ficaria L.*
+
+**24103 obs.**
+![Prunus spinosa L.](images/Prunus_spinosa_L.jpeg){width=200px height=200px}
+*Prunus spinosa L.*
+
+**23288 obs.**
+![Zea mays L.](images/Zea_mays_L.jpeg){width=200px height=200px}
+*Zea mays L.*
+
+**23075 obs.**
+![Alliaria petiolata](images/Alliaria_petiolata.jpeg){width=200px height=200px}
+*Alliaria petiolata*
+:::
+
+
+### {{<iconify ri:sparkling-2-line>}} Beauty bias
+
+:::: {.columns}
+
+::: {.column width="44%" style='text-align: center;'}
+**10753 obs.**
+
+![](images/Centaurea_jacea.jpg){width=72%}
+
+*Centaurea jacea*
+:::
+
+
+
+
+::: {.column width="44%" style='text-align: center;'}
+
+**6 obs.**
+
+![](images/Cenchrus_agrimonioides.jpg){width=72%}
+
+*Cenchrus agrimonioides*
+:::
+
+::::
+
+
+
+
+### {{<iconify emojione-monotone:straight-ruler>}} Size bias
+<hr>
+
+
+:::: {.columns style='display: flex !important'}
+
+::: {.column width="33%" style='text-align: center;'}
+
+**8376 obs.**
+
+![](images/Magnolia_grandiflora.png){width=75%}
+
+*Magnolia grandiflora*
 
 :::
 
 
-<div style="text-align: center; margin-top: 20px;">
-  <strong>Based on pictures only, plant species are challenging to discriminate!</strong>
-</div>
+::: {.column width="3%" style='text-align: center;'}
+
+![](images/rule.png){width=20%}
+
+
+:::
+
+
+
+
+
+::: {.column width="33%" style='text-align: center;'}
+
+**413 obs.**
+
+![](images/Moehringia_trinervia.png){width=25%}
+
+*Moehringia trinervia*
+:::
+
+::::
+
+
+
 
 
 
@@ -373,7 +505,6 @@ release a large-scale dataset **sharing similar features** as the Pl@ntNet datas
 <br>
 
 <!-- ----------------------------------------------------------------------- -->
-
 
 
 

@@ -59,6 +59,7 @@ hr {
   border: 0.11em solid $teal;
   border-radius: 0.2em;
   margin-bottom: 0.7em;
+  width:100%
 }
 
 // teal horizontal line
@@ -398,12 +399,17 @@ h3{
   text-decoration: underline; /* Adds underline to the hyperlink text on hover */
 }
 
-.reveal slide-number
-{
-  font-size: 5em;
-  // color: $teal;
+
+.reveal .progress{
+  background-color: black;
+  color: orangered
 }
 
+.slide-number {
+
+  color: $body-color !important;
+  font-size: 1.1em !important;
+}
 
 @media (max-width: 600px) {
   :root {
@@ -418,3 +424,4 @@ h3{
     transform: scale(0.55);
   }
   }
+
