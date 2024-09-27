@@ -5,7 +5,9 @@ project:
 
 license: CC BY-SA
 from: markdown+emoji
-bibliography: /home/jsalmon/Documents/OrganizationFiles/tex/biblio/references_all.bib
+bibliography: 
+  - https://raw.githubusercontent.com/josephsalmon/OrganizationFiles/refs/heads/master/tex/biblio/references_all.bib
+  - /home/jsalmon/Documents/OrganizationFiles/tex/biblio/references_all.bib
 # csl: ieee.csl
 
 history: false

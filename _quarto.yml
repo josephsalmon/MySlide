@@ -33,7 +33,7 @@ format:
         # - superhero
         - silvia-theme.scss
         # - silvia/colors.scss
-        - silvia/fonts.scss
+        # - silvia/fonts.scss
     highlight-style: a11y
     code-link: true
 

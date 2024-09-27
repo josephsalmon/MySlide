@@ -1,6 +1,6 @@
 ---
 description: |
-  I have reluctantly decided to create a gallery of slides blog.
+  I have decided to create a fresh slideshow gallery. It will be updated from time to time...
 date: "2024-09-25"
 categories: [Blogging, Slides, Revealjs]
 image: "Celting_knot_color.svg"
