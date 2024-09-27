@@ -735,14 +735,16 @@ Link: [https://identify.plantnet.org/weurope/observations/1012500059](https://id
 
 <!-------------------------------------------------------------------------- -->
 ### Objective
-
+<hr>
+<br>
 Provide for all images $x_i$ an aggregated label $\hat{y}_i$ based on the votes $y^{u}_i$ of the workers $u \in \mathcal{U}$.
 <!-------------------------------------------------------------------------- -->
 
 
 <!-------------------------------------------------------------------------- -->
-### Majority Vote
-
+### Majority Vote (MV) {.left}
+<hr>
+<br>
 **Naive idea**: make users vote and take the most voted label for each image
 
 ![](images/MV_smiley.svg){width=95%}
@@ -751,12 +753,10 @@ Provide for all images $x_i$ an aggregated label $\hat{y}_i$ based on the votes 
 
 
 <!-------------------------------------------------------------------------- -->
-### Majority Vote (MV)
-
-
+### Majority Vote (more)
+<br>
 
 <div class="defini" data-text='Majority vote'>
-Majority Voting outputs the most answered label:
 
 $$
 \forall x_i \in \mathcal{X}_{\text{train}},\quad
@@ -767,14 +767,17 @@ $$
 </div>
 
 
-**Properties**:
+**Properties**: output the most answered label
 
 - <span style="color:#047C90;">✓</span> simple
 - <span style="color:#047C90;">✓</span> adapted for any number of users
-- <span style="color:#047C90;">✓</span> usually efficient, often few labelers sufficient (say <5)
+- <span style="color:#047C90;">✓</span> usually efficient, often few labelers sufficient (say < 5, [@Snow_OConnor_Jurafsky_Ng08] )
 - <span style="color:red;">✗</span>  ineffective for borderline cases
 - <span style="color:red;">✗</span>  suffer from spammers / adversarial users
 <!-------------------------------------------------------------------------- -->
+
+
+
 
 
 <!-------------------------------------------------------------------------- -->

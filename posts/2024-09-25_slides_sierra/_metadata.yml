@@ -9,7 +9,7 @@ from: markdown+emoji
 bibliography: 
   - https://raw.githubusercontent.com/josephsalmon/OrganizationFiles/refs/heads/master/tex/biblio/references_all.bib
   - https://raw.githubusercontent.com/josephsalmon/agramfort.github.io/refs/heads/source/data/Salmon.bib
-# bibliography: /home/jsalmon/Documents/OrganizationFiles/tex/biblio/references_all.bib
+  - /home/jsalmon/Documents/OrganizationFiles/tex/biblio/references_all.bib
 # https://raw.githubusercontent.com/josephsalmon/OrganizationFiles/refs/heads/master/tex/biblio/references_all.bib
 # csl: ieee.csl
 
