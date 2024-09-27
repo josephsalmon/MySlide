@@ -1123,6 +1123,8 @@ $$
 
 <!-------------------------------------------------------------------------- -->
 ### Extracting a subset of a Pl@ntNet votes
+<hr>
+<br>
 
 - South Western European flora observations since $2017$
 - $~800K$ users answered more than $11K+$ species
