@@ -218,11 +218,14 @@ A **citizen science** platform using machine learning to help people identify pl
 
 
 <!-------------------------------------------------------------------------- -->
-### {{< iconify vaadin:hourglass-start >}} Chronology of Pl@ntNet
+### {{< iconify vaadin:hourglass-start >}} Chronology of Pl@ntNet {.center }
+<hr>
 
 <br>
 
-<img src="images/PlantNet-overview-Janv-2022_js.svg" width="90%" align="middle" >
+<center>
+<img src="images/PlantNet-overview-Janv-2022_js.svg" width="90%" >
+</center>
 <!-------------------------------------------------------------------------- -->
 
 
@@ -249,7 +252,7 @@ A **citizen science** platform using machine learning to help people identify pl
 
 
 <!-------------------------------------------------------------------------- -->
-### {{<iconify bxs:user-detail>}} Associated personal contributions
+### {{<iconify bxs:user-detail>}} Personal contributions
 <hr>
 
 <br>
@@ -727,6 +730,13 @@ Link: [https://identify.plantnet.org/weurope/observations/1012500059](https://id
 
 
 <!-------------------------------------------------------------------------- -->
+## (Weighted) Majority Vote {.section-background-small}
+<!-------------------------------------------------------------------------- -->
+
+
+
+
+<!-------------------------------------------------------------------------- -->
 ### {{<iconify fluent:clipboard-math-formula-32-regular>}} Notation
 
 ![](images/notation_smiley.svg){width=86%}
@@ -742,22 +752,25 @@ Provide for all images $x_i$ an aggregated label $\hat{y}_i$ based on the votes 
 
 
 <!-------------------------------------------------------------------------- -->
-### Majority Vote (MV) {.left}
+### Majority Vote (MV): intuitively
 <hr>
 <br>
 **Naive idea**: make users vote and take the most voted label for each image
 
-![](images/MV_smiley.svg){width=95%}
+
+![](images/MV_smiley.svg){.fragment width=95%}
 <!-------------------------------------------------------------------------- -->
 
 
 
 <!-------------------------------------------------------------------------- -->
-### Majority Vote (more)
+### Majority Vote : formally
+<hr>
 <br>
 
-<div class="defini" data-text='Majority vote'>
+**Naive idea**: make users vote and take the most voted label for each image
 
+<div class="defini" data-text='Majority vote'>
 $$
 \forall x_i \in \mathcal{X}_{\text{train}},\quad
 \hat y_i^{\text{MV}} = \argmax_{k\in [K]}
@@ -766,16 +779,199 @@ $$
 
 </div>
 
+<br>
 
-**Properties**: output the most answered label
+::::: {.columns style='display: flex !important; height: 90%;'}
+
+::: {.column width="18%" }
+
+[**Properties**]{.underline}:
+
+:::
+
+
+
+::: {.column width="82%"}
 
 - <span style="color:#047C90;">✓</span> simple
 - <span style="color:#047C90;">✓</span> adapted for any number of users
-- <span style="color:#047C90;">✓</span> usually efficient, often few labelers sufficient (say < 5, [@Snow_OConnor_Jurafsky_Ng08] )
+- <span style="color:#047C90;">✓</span> efficient, few labelers sufficient [say < 5, @Snow_OConnor_Jurafsky_Ng08]
 - <span style="color:red;">✗</span>  ineffective for borderline cases
 - <span style="color:red;">✗</span>  suffer from spammers / adversarial users
+
+:::
+
+::::
 <!-------------------------------------------------------------------------- -->
 
+<!-------------------------------------------------------------------------- -->
+### {{<iconify ri:weight-fill>}} Weights, confidence and accuracy
+<hr>
+<br>
+
+[**Constraints**]{.underline}: wide range of skills, different levels of expertise
+
+
+[**Modeling aspect**]{.underline}: add a user weight to balance votes
+
+
+::: {.fragment}
+<center>
+![](images/weights_smiley.svg){width="14%" }
+</center>
+:::
+
+
+::: {.fragment}
+
+Let us assume $(w_u)_{u\in\mathcal{U}}$ given for now
+
+:::
+<!-------------------------------------------------------------------------- -->
+
+
+### Weighted Majority Vote (WMV): example
+
+<center>
+![](images/WMV_simley.svg){width="80%"}
+</center>
+
+
+
+<!-------------------------------------------------------------------------- -->
+###  {{<iconify eos-icons:trusted-organization>}}Confidence
+
+<br>
+
+::: {.defini data-text="label confidence"}
+
+The label confidence $\mathrm{conf}_{i}(k)$ of label $k$ for image $x_i$ is the sum of the weights of the workers who voted for $k$:
+$$
+\forall k \in [K], \quad \mathrm{conf}_{i}(k) = \sum\limits_{u\in\mathcal{U}(x_i)} w_u \1_{\{y^{u}_i=k\}}
+$$
+:::
+
+
+<br>
+
+::::: {.columns style='display: flex !important; height: 90%;' .fragment}
+
+::: {.column width="30%"}
+
+[**Size effect**]{.underline}:
+
+:::
+
+::: {.column width="60%"}
+
+- more votes $\Rightarrow$ more confidence
+- more expertise $\Rightarrow$ more confidence
+
+:::
+
+:::::
+
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### {{<iconify gravity-ui:target-dart>}} Accuracy
+
+<br>
+
+::: {.defini data-text="label accuracy"}
+
+The label accuracy $\mathrm{acc}_{i}(k)$ of label $k$ for image $x_i$ is the normalized sum of weights of the workers who voted for $k$:
+$$
+\forall k \in [K], \quad \mathrm{acc}_{i}(k) = \frac{\mathrm{conf}_i(k)}{\sum\limits_{k'\in [K]} \mathrm{conf}_i(k')}
+$$
+:::
+
+<br>
+
+
+::::: {.columns style='display: flex !important; height: 90%;' .fragment}
+
+::: {.column width="30%"}
+
+[**Interpretation**]{.underline}:
+
+:::
+
+::: {.column width="60%"}
+
+-  only the proportion of the weights matters   
+
+:::
+
+:::::
+<!-------------------------------------------------------------------------- -->
+
+
+### Weighted Majority Vote (WMV)
+
+<br>
+
+::: {.defini data-text="Weighted Majority Voting (WMV)"}
+
+Majority voting but weighted by a confidence score per user $u$:
+$$
+\forall x_i \in \mathcal{X}_{\texttt{train}},\quad
+\hat{y}_i^{\textrm{WMV}} = \argmax_{k\in [K]}
+\Big(\sum\limits_{u\in\mathcal{U}(x_i)} w_u \1_{\{y^{u}_i=k\}} \Big)
+$$
+:::
+
+<br>
+
+::: {.fragment}
+
+[**Note**]{.underline}: the weights $w_u$ can be computed from confidence or accuracy
+$$
+\hat{y}_i^{\textrm{WMV}}
+= \argmax_{k\in [K]}
+\Big( \mathrm{conf}_i(k) \Big)
+= \argmax_{k\in [K]}
+\Big(\mathrm{acc}_i(k) \Big)
+$$
+
+:::
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### {{<iconify tdesign:task-checked>}} Label validation in Pl@ntNet
+<hr>
+<br>
+
+Two pillars for validating a label $\hat{y}_i$ for an image $x_i$ in Pl@ntNet :
+
+<br>
+
+::: {.fragment}
+
+- **Expertise**: <span style="text-decoration: underline;">labels quality check</span>
+
+    keep images with label confidence above a threshold $\theta_{\text{conf}}$, 
+    validate $\hat{y}_i$ when
+    $$
+    \boxed{\mathrm{conf}_{i}(\hat{y}_i) > \theta_{\text{conf}}}
+    $$
+
+:::
+
+
+::: {.fragment}
+
+- **Consensus**: <span style="text-decoration: underline;">labels agreement check</span>
+
+    keep images with label accuracy above a threshold $\theta_{\text{acc}}$, validate $\hat{y}_i$ when 
+    $$
+    \boxed{\mathrm{acc}_{i}(\hat{y}_i) > \theta_{\text{acc}}}
+    $$
+
+:::
+<!-------------------------------------------------------------------------- -->
 
 
 

@@ -432,7 +432,7 @@ h3{
     color: black;
     border-radius: 6px;
     background-color: #f2f2f2ff;
-    border: solid #047C90 0.2rem;
+    border: solid #047C90 0.27rem;
     // box-shadow: 5px 10px 8px #888888;
   }
   .defini::before {
@@ -449,4 +449,7 @@ h3{
     padding: 15px 15px 15px 15px;
   }
 
-  
+  .vl {
+    border-left: 3px solid black;
+    height: 120px;
+  }
