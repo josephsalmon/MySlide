@@ -14,6 +14,16 @@ format:
 
 ---
 
+::: {.hidden}
+{{
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\1}{{1\hspace{-3.8pt} 1}}
+
+}}
+:::
+
+
 <!-------------------------------------------------------------------------- -->
 #### {#title-slide data-menu-title="Title Slide" background="#053660"}
 
@@ -719,10 +729,52 @@ Link: [https://identify.plantnet.org/weurope/observations/1012500059](https://id
 <!-------------------------------------------------------------------------- -->
 ### {{<iconify fluent:clipboard-math-formula-32-regular>}} Notation
 
-![](images/notation_smiley.svg){width=96%}
+![](images/notation_smiley.svg){width=86%}
 <!-------------------------------------------------------------------------- -->
 
 
+<!-------------------------------------------------------------------------- -->
+### Objective
+
+Provide for all images $x_i$ an aggregated label $\hat{y}_i$ based on the votes $y^{u}_i$ of the workers $u \in \mathcal{U}$.
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### Majority Vote
+
+**Naive idea**: make users vote and take the most voted label for each image
+
+![](images/MV_smiley.svg){width=95%}
+<!-------------------------------------------------------------------------- -->
+
+
+
+<!-------------------------------------------------------------------------- -->
+### Majority Vote (MV)
+
+
+
+<div class="defini" data-text='Majority vote'>
+Majority Voting outputs the most answered label:
+
+$$
+\forall x_i \in \mathcal{X}_{\text{train}},\quad
+\hat y_i^{\text{MV}} = \argmax_{k\in [K]}
+\Big(\sum\limits_{u\in\mathcal{U}(x_i)} \1_{\{y^{u}_i=k\}} \Big)
+$$
+
+</div>
+
+
+**Properties**:
+
+- <span style="color:#047C90;">✓</span> simple
+- <span style="color:#047C90;">✓</span> adapted for any number of users
+- <span style="color:#047C90;">✓</span> usually efficient, often few labelers sufficient (say <5)
+- <span style="color:red;">✗</span>  ineffective for borderline cases
+- <span style="color:red;">✗</span>  suffer from spammers / adversarial users
+<!-------------------------------------------------------------------------- -->
 
 
 <!-------------------------------------------------------------------------- -->

@@ -425,3 +425,28 @@ h3{
   }
   }
 
+
+  .defini {
+    display: block;
+    font-size: 24px;
+    color: black;
+    border-radius: 6px;
+    background-color: #f2f2f2ff;
+    border: solid #047C90 0.2rem;
+    // box-shadow: 5px 10px 8px #888888;
+  }
+  .defini::before {
+    content: "Definition: " attr(data-text);
+    font-weight: bold;
+    font-style: normal;
+    display: block;
+    color: white;
+    padding: 5px 5px 5px 15px;
+    background-color: #047C90;
+  }
+
+  .defini p {
+    padding: 15px 15px 15px 15px;
+  }
+
+  
