@@ -14,7 +14,7 @@ format:
 
 ---
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 #### {#title-slide data-menu-title="Title Slide" background="#053660"}
 
 [Citizen science for plant identification: insights from Pl@ntnet]{.custom-title}
@@ -49,10 +49,10 @@ format:
 :::
 
 ::::
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### {{< iconify iconoir:flower >}}  Flower power in Montpellier {{< iconify iconoir:flower >}}  {.large-header}
 <hr>
 
@@ -101,17 +101,17 @@ and from
 
 - **Pierre Bonnet** (CIRAD, AMAP)
 - **Antoine Affouard**, **Jean-Christophe Lombardo**, **Titouan Lorieul**, **Mathias Chouet** (Inria, LIRMM, Univ. Montpellier)
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 # Pl@ntNet description {.section-background}
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### Pl@ntNet:  ML for citizen science
 <hr>
 
@@ -126,12 +126,12 @@ A **citizen science** platform using machine learning to help people identify pl
 :::
 
 ::::
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ::::{.columns style='display: flex !important'}
 
 ::: {.column width="65%"}
@@ -156,11 +156,11 @@ A **citizen science** platform using machine learning to help people identify pl
 :::
 
 ::::
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### {{< iconify hugeicons:chatting-01 >}} Pl@ntNet: usage and popularity
 <hr>
 
@@ -191,36 +191,36 @@ A **citizen science** platform using machine learning to help people identify pl
 <img src="images/plantnet_usage_rasterized.svg" width="84%" align="middle" >
 
 </div>
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### Pl@ntNet & Cooperative Learning
-
+<!-- <hr> -->
 <div style="text-align: center;">
 
 <img src="images/plantnet_schema_global_js.svg" width="90%" align="middle" >
 <!-- https://lvngd.com/blog/how-embed-google-font-svg/ -->
 </div>
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### {{< iconify vaadin:hourglass-start >}} Chronology of Pl@ntNet
 
 <br>
 
 <img src="images/PlantNet-overview-Janv-2022_js.svg" width="90%" align="middle" >
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### {{< iconify eos-icons:science >}} Scientific challenges
 <hr>
-
+<br>
 
 [**Motivation**]{.underline}: excellent app ... but not a perfect app; **How to improve?**
 
@@ -230,16 +230,16 @@ A **citizen science** platform using machine learning to help people identify pl
 - Need for methodological/computational breakthrough</li>
 
 **Note:** I am mostly innocent; started working with the Pl@ntNet team in 2020
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 # Contributions {.section-background}
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
-<!-- ----------------------------------------------------------------------- -->
-### {{<iconify weui:me-filled>}} Associated personal contributions
+<!-------------------------------------------------------------------------- -->
+### {{<iconify bxs:user-detail>}} Associated personal contributions
 <hr>
 
 <br>
@@ -303,16 +303,16 @@ A **citizen science** platform using machine learning to help people identify pl
 ::::
 
 :::
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ## Dataset release: Pl@ntNet-300K {.section-background-small}
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### {{<iconify gravity-ui:magnifier>}} A need for new benchmarks
 <hr>
 <br>
@@ -329,11 +329,11 @@ A **citizen science** platform using machine learning to help people identify pl
 release a large-scale dataset **sharing similar features** as the Pl@ntNet dataset to foster research in plant identification
 
 $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean_Salmon21]
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### Intra-class variability
 
 ::: {layout-nrow=2}
@@ -363,11 +363,11 @@ $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean
 <center>
 **Based on pictures only, plant species are challenging to discriminate!**
 </center>
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### Inter-class ambiguity
 
 
@@ -398,15 +398,15 @@ $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean
 <center>
 **Based on pictures only, plant species are challenging to discriminate!**
 </center>
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ## Sampling bias {.section-background-small}
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### {{<iconify gis:globe-earth-alt>}} Geographic bias
 
 
@@ -415,11 +415,11 @@ $\implies$ Pl@ntNet-300K [@Garcin_Joly_Bonnet_Affouard_Lombardo_Chouet_Servajean
 
 <center>Spatial density of images collected by Pl@ntNet (13/04/2024)</center>
 </div>
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### {{<iconify fluent:food-20-filled>}} Food bias 
 <hr>
 
@@ -457,7 +457,7 @@ Top-5 most observed plant species in Pl@ntNet (13/04/2024):
 
 :::: {.columns}
 
-::: {.column width="44%" style='text-align: center;'}
+::: {.column  style='text-align: center;'}
 **10753 obs.**
 
 ![](images/Centaurea_jacea.jpg){width=72%}
@@ -466,7 +466,7 @@ Top-5 most observed plant species in Pl@ntNet (13/04/2024):
 :::
 
 
-::: {.column width="44%" style='text-align: center;'}
+::: {.column  style='text-align: center;'}
 
 **6 obs.**
 
@@ -476,19 +476,18 @@ Top-5 most observed plant species in Pl@ntNet (13/04/2024):
 :::
 
 ::::
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 ### {{<iconify emojione-monotone:straight-ruler>}} Size bias
-<hr>
 
 
 :::: {.columns style='display: flex !important'}
 
-::: {.column width="33%" style='text-align: center;'}
+::: {.column  style='text-align: center;'}
 
 **8376 obs.**
 
@@ -499,18 +498,14 @@ Top-5 most observed plant species in Pl@ntNet (13/04/2024):
 :::
 
 
-::: {.column width="3%" style='text-align: center;'}
+::: {.column  style='text-align: center;'}
 
 ![](images/rule.png){width=20%}
 
 
 :::
 
-
-
-
-
-::: {.column width="33%" style='text-align: center;'}
+::: {.column  style='text-align: center;'}
 
 **413 obs.**
 
@@ -520,37 +515,239 @@ Top-5 most observed plant species in Pl@ntNet (13/04/2024):
 :::
 
 ::::
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
-<!-- ----------------------------------------------------------------------- -->
-## Pl@ntNet-300K construction {.section-background-small}
-<!-- ----------------------------------------------------------------------- -->
+### Many more biases ...
+<hr>
+
+<br>
+
+- Selection bias
+    - Convenience sampling:  **easily** vs. *hardly* accessible
+    - Preference for certain species: **visibility** / **ease of identification**
+    - Subjective bias: selection based on **personal judgment**, may not be random or representative
+     - Rare species: **rare** or **endangered** species may be under-represented
+
+- Temporal bias / seasonal variation: **seasonal changes** in plant characteristics
+- ...
+
+<!-------------------------------------------------------------------------- -->
+
+### Construction of Pl@ntNet-300K {style="text-align: center;"}
+
+
+<center>
+![](images/sample_genus.svg){width=80%}
+
+Sample at genus level to preserve intra-genus ambiguity: use **hierarchical structure**
+</center>
+
+<!-------------------------------------------------------------------------- -->
+### {{<iconify icon-park-solid:chart-histogram-two>}} Species distribution & long tail 
+<hr>
+
+:::: {.columns style='display: flex !important'}
+
+::: {.column width=82%}
+
+::: {.r-stack}
+![](images/lorentz_plantnet.svg){.fragment width=100% fragment-index=2}
+
+![](images/lorentz_plantnet300K.svg){.fragment width=100% fragment-index=3}
+
+![](images/lorentz_with_Imagenet.svg){.fragment width=100% fragment-index=4}
+
+![](images/lorentz_with_CIFAR_Imagenet.svg){.fragment width=100% fragment-index=5}
+
+:::
+
+:::
+
+::: {.column style='text-align: center;'}
+
+<br>
+
+:::{.fragment fragment-index=1}
+- Earth: 300K+ species
+- Pl@ntNet: 50K+ species
+- Pl@ntNet-300K: 1K+ species
+:::
+
+:::{.fragment fragment-index=3}
+**[Note]{.underline}**: long tail preserved by genera subsampling
+:::
+:::
+
+::::
+
+<br>
+
+:::{.fragment fragment-index=2}
+
+<center>
+**80% of species | 11% of images** $\iff$ **20% of species | 89% of images**
+</center>
+
+:::
+
+
+### {{<iconify eos-icons:database>}} Details on Pl@ntNet-300K
+<hr>
+<br>
+
+
+:::: {.columns style='display: flex !important'}
+
+::: {.column }
+
+[**Caracteristics**]{.underline}:
+
+<br>
+
+- **306,146** color images
+- size : 32 GB
+- Labels: K=**1,081** species
+- Required **2,079,003** volunteers "workers"
+:::
+
+
+::: {.column width=55%}
+:::{.fragment}
+
+<br>
+
+<center>
+**Zenodo, 1 click download**
+
+[https://zenodo.org/record/5645731](https://zenodo.org/record/5645731)
+
+<br>
+
+**Code to train models**
+
+[https://github.com/plantnet/PlantNet-300K](https://github.com/plantnet/PlantNet-300K)
+</center>
+
+:::
+
+:::
+
+::::
+<!-------------------------------------------------------------------------- -->
+
+
+
+<!-------------------------------------------------------------------------- -->
+# Votes, labels & aggregation {.section-background}
+<!-------------------------------------------------------------------------- -->
+
+
+### {{<iconify fluent:vote-24-filled>}} Pl@ntNet online "votes"
+<hr>
+
+
+<center>
+![](images/plantnet_online.png){width=70%}
+
+Link: [https://identify.plantnet.org/weurope/observations/1012500059](https://identify.plantnet.org/weurope/observations/1012500059)
+</center>
+
+### {{<iconify pajamas:labels>}} What about labels?
+<hr>
+
+<br>
+
+- Images from users... so are the labels!
+
+- But **users** can be wrong or **not experts**
+
+- **Several labels** can be available per image!
+
+
+### {{<iconify jam:write-f>}} Users can make corrections {.center style="text-align: center;"}
+
+![](images/plantnet_corrected.png){width=90%}
+
+---
+
+### But sometimes users can't be trusted {.center style="text-align: center;"}
+
+
+<center>
+::: {.r-stack}
+
+![](images/vanessa_corrected.png){width=50%}
+
+![](images/right_vanessa_corrected.png){.fragment width=50% fragment-index=1}
+
+:::
+
+
+Link: [https://identify.plantnet.org/weurope/observations/1012500059](https://identify.plantnet.org/weurope/observations/1012500059)
+
+</center>
+<!-------------------------------------------------------------------------- -->
 
 
 
 
-<!-- ----------------------------------------------------------------------- -->
+
+<!-------------------------------------------------------------------------- -->
+### {{<iconify mdi:crowdsource>}} Crowdsourcing for classification
+<hr>
+<br>
+
+
+**The good, the bad and the ugly**
+
+
+
+::: {.fragment}
+- The good: fast, easy, cheap data collection
+:::
+
+::: {.fragment}
+- The bad: noisy labels with different levels of expertise
+:::
+
+::: {.fragment}
+- The ugly: (partly) missing theory, ad-hoc methods for noisy labels
+:::
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### {{<iconify fluent:clipboard-math-formula-32-regular>}} Notation
+
+![](images/notation_smiley.svg){width=96%}
+<!-------------------------------------------------------------------------- -->
+
+
+
+
+<!-------------------------------------------------------------------------- -->
 ### {#contact data-menu-title="Contact"}
+
 ![](https://raw.githubusercontent.com/josephsalmon/OrganizationFiles/master/inkscape/images/contact_js.svg)
 
 <br>
 <br>
 <br>
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
 # Bibliographie {.section-background}
 
 
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 ### References
 <hr>
 
 ::: {#refs}
 :::
-<!-- ----------------------------------------------------------------------- -->
+<!-------------------------------------------------------------------------- -->
 
 
 
