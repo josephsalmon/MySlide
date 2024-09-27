@@ -974,6 +974,336 @@ Two pillars for validating a label $\hat{y}_i$ for an image $x_i$ in Pl@ntNet :
 <!-------------------------------------------------------------------------- -->
 
 
+### Pl@ntNet label aggregation (EM algorithm) {.center style="text-align: center;"}
+
+
+
+::: {.r-stack}
+
+![](images/schema_plantnet_aggregation_js_0.svg){.fragment width=81% fragment-index=1}
+
+![](images/schema_plantnet_aggregation_js_1.svg){.fragment width=81% fragment-index=2}
+
+![](images/schema_plantnet_aggregation_js.svg){.fragment width=81% fragment-index=3}
+:::
+
+
+::: {.fragment}
+
+**Weighting scheme**: weight user vote by its number of identified species
+
+:::
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### Weights example {.center style="text-align: center;"}
+
+
+:::: {.columns}
+
+::: {.column width="34%"}
+- $n_{\mathrm{user}} = 6$
+- $K=3$ :
+  *Rosa indica, Ficus elastica, Mentha arvensis*
+- $\theta_{\text{conf}}=2$ and $\theta_{\text{acc}}=0.7$
+<!-- - Users weights as on the right -->
+:::
+
+::: {.column}
+
+![](images/weights_users.svg){.fragment width=95% fragment-index=1}
+
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column}
+
+:::{.r-stack}
+
+![](images/histplot_conf_init.svg){.fragment width=84% fragment-index=2-3}
+
+![](images/histplot_conf_invalidate.svg){.fragment width=84% fragment-index=4}
+
+![](images/histplot_conf_switch.svg){.fragment width=84% fragment-index=5}
+
+:::
+
+:::
+
+
+::: {.column}
+
+:::{.r-stack}
+
+![](images/histplot_acc_init.svg){.fragment width=84% fragment-index=3}
+
+![](images/histplot_acc_invalidate.svg){.fragment width=84% fragment-index=4}
+
+![](images/histplot_acc_switch.svg){.fragment width=84% fragment-index=5}
+
+::: 
+
+:::
+
+::::
+
+
+:::{.r-stack}
+
+::: {.fragment fragment-index=2 .fade-in-then-out}
+Take into account 4 users out of 6
+:::
+
+::: {.fragment fragment-index=3 .fade-in-then-out}
+Take into account 4 users out of 6
+:::
+
+::: {.fragment fragment-index=4 .fade-in-then-out}
+**Invalidated label**: Adding User 5 reduces accuracy
+:::
+
+::: {.fragment fragment-index=5 .fade-in-then-out}
+**Label switched**: User 6 is an expert (even self-validating)
+:::
+
+:::
+<!-------------------------------------------------------------------------- -->
+
+<!-------------------------------------------------------------------------- -->
+### Choice of weight function
+<hr>
+
+$$
+f(n_u) = n_u^\alpha - n_u^\beta + \gamma \text{ with }
+\begin{cases}
+\alpha = 0.5 \\
+\beta=0.2 \\
+\gamma=\log(1.7)\simeq 0.74
+\end{cases}
+$$
+
+<center>
+![](images/weight_function.svg){width=70%}
+</center>
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### Other existing strategies
+<hr>
+<br>
+
+::: {.incremental}
+- **Majority Vote** (MV)
+
+- **Worker agreement with aggregate (WAWA)** 
+    - Majority vote
+    - Weight users by how much they agree with the majority
+    - Weighted majority vote
+
+- **TwoThrid** (iNaturalist)
+    - Need 2 votes
+    - $2/3$ of agreements
+:::
+<!-------------------------------------------------------------------------- -->
+
+
+
+<!-------------------------------------------------------------------------- -->
+## Pl@ntNet labels release: <span style="display: block;">**South West.  European flora**</span> {.section-background-small}
+<!-------------------------------------------------------------------------- -->
+
+
+
+
+
+<!-------------------------------------------------------------------------- -->
+### Extracting a subset of a Pl@ntNet votes
+
+- South Western European flora observations since $2017$
+- $~800K$ users answered more than $11K+$ species
+- $~9M+$ votes casted
+- **Imbalance**: 80% of observations are represented by 10% of total votes
+
+::: {.pause}
+:::
+
+::: {style="text-align: center; margin-top: 1cm;"}
+<span style="color: red;">No ground truth available to evaluate the strategies</span>
+:::
+<!-------------------------------------------------------------------------- -->
+
+
+
+<!-------------------------------------------------------------------------- -->
+### Test sets without ground truth {.center style="text-align: center;"}
+
+- Extract $98$ experts: Tela Botanica + prior knowledge (P. Bonnet)
+
+![](images/sankey_v2.svg){width=75%}
+
+**Pl@ntNet South Western European flora** 
+
+[https://zenodo.org/records/10782465](https://zenodo.org/records/10782465)
+<!-------------------------------------------------------------------------- -->
+
+
+
+
+<!-------------------------------------------------------------------------- -->
+### Accuracy and number of classes kept {.center style="text-align: center;"}
+
+![](images/both_accuracies.svg){width=55%}
+
+
+. . .
+
+- Pl@ntNet aggregation performs better overall
+- TwoThird is highly impacted by the reject threshold
+- In ambiguous settings, strategies weighting users are better
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### Performance: Precision, recall and validity {.center style="text-align: center;"}
+
+::: {.columns}
+::: {.column width="40%"}
+![](images/precision_and_recall_one_disagreeement__macro.svg)
+:::
+::: {.column width="40%"}
+![](images/volume_train_data-1.svg)
+:::
+:::
+
+. . .
+
+- Pl@ntNet aggregation performs better overall
+- TwoThird has good precision but bad recall
+- We indeed remove some data but less than TwoThird
+
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### {{<iconify ooui:robot>}} Integrating the AI vote
+<hr>
+<br>
+
+**Why?**
+
+- More data
+- Could correct non-expert users
+- Could invalidate bad quality observation
+
+. . .
+
+**Main danger**
+
+- Model collapse[@Shumailov_Shumaylov_Zhao_Papernot_Anderson_Gal24]: users are already guided by AI predictions
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### Potential strategies to integrate the AI vote
+<hr>
+
+- AI **as worker**: naive integration
+- AI **fixed weight**:
+    - weight fixed to $1.7$
+    - can invalidate two new users but is not self-validating
+- AI **invalidating**:
+    - weight fixed to $1.7$
+    - can only invalidate observation
+- AI **confident**:
+    - weight fixed to $1.7$
+    - can participate if confidence in prediction high enough ($\theta_{\text{score}}$)
+
+::: {style="text-align: center; margin-top: .5cm;"}
+$\Longrightarrow$ **confident AI with $\theta_{\text{score}}=0.7$ performs best... but invalidating AI could be preferred for safety** $\Longleftarrow$
+:::
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### Aggregating labels: a new open source tool
+<hr>
+
+`peerannot`: Python library to handle crowdsourced data
+
+
+::: {.columns}
+::: {.column width="30%"}
+![](images/qr-code-styling.png){width=65%}
+:::
+::: {.column width="70%"}
+![](images/strategiesbis.svg)
+:::
+:::
+
+<center>
+[**Link**]{.underline}: [https://peerannot.github.io/](https://peerannot.github.io/)
+</center>
+<!-------------------------------------------------------------------------- -->
+
+
+<!-------------------------------------------------------------------------- -->
+### Conclusion
+<hr>
+
+
+- Challenges in citizen science: many and varied (need more attention)
+- Crowdsourcing / Label uncertainty: helpful for **data curation**
+- Improved **data quality** $\implies$ **improved learning** performance
+
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="30%"}
+**Dataset release**:
+:::
+
+::: {.column width="69%"}
+
+- Pl@ntNet-300K: [https://zenodo.org/record/5645731](https://zenodo.org/record/5645731)
+- Pl@ntNet SWE flora: [https://zenodo.org/records/10782465](https://zenodo.org/records/10782465)
+:::
+::::
+
+
+
+:::: {.columns}
+
+::: {.column width="30%"}
+**Code release**:
+:::
+
+::: {.column width="69%"}
+
+- Toolbox: [https://peerannot.github.io/](https://peerannot.github.io/)
+- Some benchmarks: [https://benchopt.github.io/](https://benchopt.github.io/)
+:::
+::::
+
+:::: {.columns}
+
+::: {.column width="30%"}
+**Future work**
+:::
+
+::: {.column width="69%"}
+- Uncertainty quantification
+- Improve robustness to adversarial users
+- Leverage gamification for more quality labels [theplantgame.com](https://theplantgame.com)
+:::
+::::
+<!-------------------------------------------------------------------------- -->
 
 
 <!-------------------------------------------------------------------------- -->
