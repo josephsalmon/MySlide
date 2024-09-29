@@ -618,7 +618,7 @@ Sample at genus level to preserve intra-genus ambiguity: use **hierarchical stru
 <br>
 
 - **306,146** color images
-- size : 32 GB
+- Size : **32 GB**
 - Labels: K=**1,081** species
 - Required **2,079,003** volunteers "workers"
 :::
@@ -824,7 +824,7 @@ $$
 
 ::: {.fragment}
 
-Let us assume $(w_u)_{u\in\mathcal{U}}$ given for now
+Assume given weights $(w_u)_{u\in\mathcal{U}}$ for now
 
 :::
 <!-------------------------------------------------------------------------- -->
@@ -1097,18 +1097,22 @@ $$
 <hr>
 <br>
 
-::: {.incremental}
 - **Majority Vote** (MV)
 
-- **Worker agreement with aggregate (WAWA)** 
+. . .
+
+- **Worker agreement with aggregate (WAWA)**
+
     - Majority vote
     - Weight users by how much they agree with the majority
     - Weighted majority vote
 
+. . .
+
 - **TwoThrid** (iNaturalist)
     - Need 2 votes
     - $2/3$ of agreements
-:::
+
 <!-------------------------------------------------------------------------- -->
 
 
@@ -1206,7 +1210,7 @@ $$
 
 **Main danger**
 
-- Model collapse[@Shumailov_Shumaylov_Zhao_Papernot_Anderson_Gal24]: users are already guided by AI predictions
+- Model collapse [@Shumailov_Shumaylov_Zhao_Papernot_Anderson_Gal24]: users are already guided by AI predictions
 <!-------------------------------------------------------------------------- -->
 
 

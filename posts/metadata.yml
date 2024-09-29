@@ -12,10 +12,21 @@
 - title: "Update on slideshow gallery"
   subtitle: "I've decided the time has come to refresh my talk gallery. Hope you'll like it."
   # author: "Joseph Salmon"
-  date: 2024-09-25
+  date: 2000-09-25
   image: posts/2024-09-25_slides/images/Celting_knot_color.svg
   path: 2024-09-25_slides/index.qmd
   categories:
    - revealjs
    - slides
    - quarto
+- title: "Improve learning combining crowdsourced labels
+by weighting Areas Under the Margin"
+  subtitle: "A talk on the use of crowdsourced labels to improve learning. It describes a way to quantify the quality of the labels, and how to use this information to improve learning."
+  # author: "Joseph Salmon"
+  date: 2022-11-29
+  image: images/fox.png
+  path: https://josephsalmon.eu/talks/slides_IMT2022.pdf
+  categories:
+   - crowdsourcing
+   - multi-class classification
+  

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg:svg
    version="1.1"
-   width="550.2417"
+   width="800.242"
    height="589.2793"
    id="svg133"
    sodipodi:docname="Celting_knot_color.svg"
@@ -20,8 +20,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </svg:metadata>
@@ -34,13 +32,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="3378"
-     inkscape:window-height="1371"
+     inkscape:window-width="1474"
+     inkscape:window-height="891"
      id="namedview135"
      showgrid="false"
-     inkscape:zoom="1.6978417"
-     inkscape:cx="415.23306"
-     inkscape:cy="259.74153"
+     inkscape:zoom="0.60027769"
+     inkscape:cx="363.16525"
+     inkscape:cy="259.87972"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -72,7 +70,7 @@
        transform="translate(87.169492,30.627119)">
       <svg:g
          id="g405"
-         transform="matrix(0.71780117,0,0,0.71780117,123.66049,155.57287)">
+         transform="matrix(0.71780117,0,0,0.71780117,248.66064,155.57287)">
         <svg:path
            style="opacity:1;fill:#40c5eb;fill-opacity:1;stroke:none;stroke-width:0.785703;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
            d="m 158.64671,223.73773 c -5.93219,-0.39334 -3.25805,6.46414 -0.77304,8.9912 9.32853,13.74417 18.8234,27.85603 30.92851,39.2571 7.18984,-2.15252 12.50342,-9.47917 18.94335,-13.5344 4.95083,-5.37441 2.74261,-14.42128 4.83049,-21.24629 3.22486,-6.59401 -4.73811,-7.55051 -9.12979,-8.25649 -14.79753,-2.52276 -29.76766,-4.91951 -44.79952,-5.21112 z"

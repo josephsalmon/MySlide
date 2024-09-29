@@ -8,11 +8,13 @@ listing:
   sort: "date desc"
   type: grid
   grid-columns: 4
-  image-height: 100%
+  image-height: 130px
   page-size: 100
   categories: true
 page-layout: full
 title-block-banner: true
+
+
 # image: profile_hex.jpg
 # header-includes: >
 #   <link rel="stylesheet" href="listing-default.css">
