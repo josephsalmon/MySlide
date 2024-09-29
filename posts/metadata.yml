@@ -34,7 +34,7 @@ by weighting Areas Under the Margin"
   # author: "Joseph Salmon"
   date: 2021-11-08
   image: images/lasso_opt_path.png
-  path: https://josephsalmon.eu/talks/slides_IMT2022.pdf
+  path: https://josephsalmon.eu/talks/MIPS_JS.pdf
   categories:
    - optimization
    - grid-search
