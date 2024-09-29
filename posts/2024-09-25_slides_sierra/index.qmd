@@ -1,6 +1,6 @@
 ---
-description: |
-  Talk on Pl@ntnet and questions on citizen science
+# description: |
+#   Talk on Pl@ntnet and questions on citizen science
 date: "2024-09-25"
 image: "Celting_knot_color.svg"
 image-alt: "Celting knot with partial coloring"

@@ -8,7 +8,9 @@ listing:
   sort: "date desc"
   type: grid
   grid-columns: 4
-  image-height: 130px
+  # image-height: 130px
+  image-height: 95%
+
   page-size: 100
   categories: true
 page-layout: full
