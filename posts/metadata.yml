@@ -1,6 +1,6 @@
 # Internal slide decks
 - title: "Pl@ntnet & citizen science"
-  subtitle: "Talk on Pl@ntnet and questions on citizen science"
+  # subtitle: "Talk on Pl@ntnet and questions on citizen science"
   # author: "Joseph Salmon"
   date: 2024-09-25
   image: posts/2024-09-25_slides_sierra/images/plantnet_schema_global_js.svg
@@ -10,7 +10,7 @@
    - crowdsourcing
    - labeling
 - title: "Update on slideshow gallery"
-  subtitle: "I've decided the time has come to refresh my talk gallery. Hope you'll like it."
+  # subtitle: "I've decided the time has come to refresh my talk gallery. Hope you'll like it."
   # author: "Joseph Salmon"
   date: 2000-09-25
   image: posts/2024-09-25_slides/images/Celting_knot_color.svg
@@ -21,7 +21,7 @@
    - quarto
 - title: "Improve learning combining crowdsourced labels
 by weighting Areas Under the Margin"
-  subtitle: "A talk on the use of crowdsourced labels to improve learning. It describes a way to quantify the quality of the labels, and how to use this information to improve learning."
+  # subtitle: "..."
   # author: "Joseph Salmon"
   date: 2022-11-29
   image: images/fox.png
@@ -29,4 +29,14 @@ by weighting Areas Under the Margin"
   categories:
    - crowdsourcing
    - multi-class classification
-  
+- title: "Implicit differentiation for fast hyperparameter selection in non-smooth convex learning"
+  # subtitle: "A talk on the use of crowdsourced labels to improve learning. It describes a way to quantify the quality of the labels, and how to use this information to improve learning."
+  # author: "Joseph Salmon"
+  date: 2021-11-08
+  image: images/lasso_opt_path.png
+  path: https://josephsalmon.eu/talks/slides_IMT2022.pdf
+  categories:
+   - optimization
+   - grid-search
+   - hyperparameter selection
+   - bilevel optimization
