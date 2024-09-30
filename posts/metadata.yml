@@ -124,7 +124,7 @@ by weighting Areas Under the Margin"
 
 - title: "Optimization: (Block) coordinate descent for neuro-imaging"
   date: 2019-05-21
-  image: imaegs/BrainExample.png
+  image: images/BrainExample.png
   path: https://josephsalmon.eu/talks/sparsemodels_motivation.pdf
   categories:
    - optimization
