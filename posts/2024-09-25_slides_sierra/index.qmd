@@ -208,12 +208,24 @@ A **citizen science** platform using machine learning to help people identify pl
 <!-------------------------------------------------------------------------- -->
 ### Pl@ntNet & Cooperative Learning
 <!-- <hr> -->
-<div style="text-align: center;">
 
-<img src="images/plantnet_schema_global_js.svg" width="90%" align="middle" >
+
+<!-- <center> -->
+
+::: {.r-stack}
+![](images/plantnet_schema_global_js_0.svg){.fragment width=100% fragment-index=2}
+
+![](images/plantnet_schema_global_js_1.svg){.fragment width=100% fragment-index=3}
+
+![](images/plantnet_schema_global_js_2.svg){.fragment width=100% fragment-index=4}
+
+![](images/plantnet_schema_global_js_3.svg){.fragment width=100% fragment-index=5}
+
+![](images/plantnet_schema_global_js_4.svg){.fragment width=100% fragment-index=6}
 <!-- https://lvngd.com/blog/how-embed-google-font-svg/ -->
-</div>
-<!-------------------------------------------------------------------------- -->
+
+:::
+
 
 
 
