@@ -196,6 +196,8 @@ A **citizen science** platform using machine learning to help people identify pl
 
 ::::
 
+. . .
+
 <div style="text-align: center;">
 
 <img src="images/plantnet_usage_rasterized.svg" width="84%" align="middle" >
@@ -237,7 +239,14 @@ A **citizen science** platform using machine learning to help people identify pl
 
 <center>
 <img src="images/PlantNet-overview-Janv-2022_js.svg" width="90%" >
+
+<br>
+**Note:** I am mostly innocent; started working with the Pl@ntNet team in 2020
+
 </center>
+
+
+
 <!-------------------------------------------------------------------------- -->
 
 
@@ -254,7 +263,6 @@ A **citizen science** platform using machine learning to help people identify pl
 - Many open problems (theoretical/practical)</li>
 - Need for methodological/computational breakthrough</li>
 
-**Note:** I am mostly innocent; started working with the Pl@ntNet team in 2020
 <!-------------------------------------------------------------------------- -->
 
 
@@ -293,7 +301,7 @@ A **citizen science** platform using machine learning to help people identify pl
 
 ::: {.column width="68%"}
 
-- **Learning & crowd-sourced data** [@Lefort_Charlier_Joly_Salmon22]: How to leverage multiple labels per image to improve the model? Need to **assert quality**: the workers, the images/labels, the model, etc.
+- **Learning & crowd-sourced data** [@Lefort_Charlier_Joly_Salmon22, @Lefort_etal24]: How to leverage multiple labels per image to improve the model? Need to **assert quality**: the workers, the images/labels, the model, etc.
 
 :::
 
@@ -938,7 +946,7 @@ $$
 
 ::: {.fragment}
 
-[**Note**]{.underline}: the weights $w_u$ can be computed from confidence or accuracy
+[**Note**]{.underline}: the weighted majority vote can be computed from confidence or accuracy
 $$
 \hat{y}_i^{\textrm{WMV}}
 = \argmax_{k\in [K]}
@@ -988,6 +996,7 @@ Two pillars for validating a label $\hat{y}_i$ for an image $x_i$ in Pl@ntNet :
 
 ### Pl@ntNet label aggregation (EM algorithm) {.center style="text-align: center;"}
 
+**Weighting scheme**: weight user vote by its number of identified species
 
 
 ::: {.r-stack}
@@ -1002,7 +1011,6 @@ Two pillars for validating a label $\hat{y}_i$ for an image $x_i$ in Pl@ntNet :
 
 ::: {.fragment}
 
-**Weighting scheme**: weight user vote by its number of identified species
 
 :::
 <!-------------------------------------------------------------------------- -->
@@ -1113,7 +1121,7 @@ $$
 
 . . .
 
-- **Worker agreement with aggregate (WAWA)**
+- **Worker agreement with aggregate (WAWA)**: 2-step method
 
     - Majority vote
     - Weight users by how much they agree with the majority
@@ -1143,8 +1151,9 @@ $$
 <br>
 
 - South Western European flora observations since $2017$
-- $~800K$ users answered more than $11K+$ species
-- $~9M+$ votes casted
+- $~800K$ users answered more than $11K$ species
+- $~6.6M$ observations
+- $~9M$ votes casted
 - **Imbalance**: 80% of observations are represented by 10% of total votes
 
 ::: {.pause}
@@ -1350,3 +1359,11 @@ $\Longrightarrow$ **confident AI with $\theta_{\text{score}}=0.7$ performs best.
 
 
 
+# Appendix {.section-background}
+
+### More on AI strategies {.center style="text-align: center;"}
+
+
+<center>
+<img src="images/ai_strategy_votes.svg" width="90%" >
+</center>
