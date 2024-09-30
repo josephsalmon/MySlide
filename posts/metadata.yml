@@ -140,3 +140,61 @@ by weighting Areas Under the Margin"
    - lasso
    - optimization
    - dual extrapolation
+
+- title: Convex optimization, sparsity and regression in high dimension
+  link: http://pi2015.eventos.cimat.mx/
+  location: Guanajuato
+  date: 2015-11-03
+  image: images/l1.png
+  path: https://josephsalmon.eu/talks/CIMAT_tutorial_15.pdf
+  video: https://www.youtube.com/watch?v=uA-9x2dqQyE
+  categories:
+   - optimization
+   - sparse regression
+
+- title: "Adaptive Validation, a possible alternative to Cross-Validation"
+  date: 2014-10-09
+  path: https://josephsalmon.eu/talks/Bioimage_salmon.pdf
+  image: images/LSLasso.png
+  categories:
+   - hyperparameter selection
+   - sparse regression
+
+- title: "Poisson noise reduction with non-local PCA"
+  date: 2014-02-01
+  path: https://josephsalmon.eu/talks/SIP.pdf
+  images: images/Saturn.png
+  categories:
+   - image processing
+   - non-local methods
+
+- title: "Learning Heteroscedastic Models by Convex Programming under Group Sparsity"
+  date: 2013-09-03
+  path: https://josephsalmon.eu/talks/ScHeDs.pdf
+  image: images/sparsity.png
+  categories:
+   - high-dimensional statistics
+   - group sparsity
+   - heteroscedastic regression
+
+
+- title: "Optimal Aggregation for Affine Estimators"
+  link: http://www.math.gatech.edu/seminars-colloquia/series?tid=142
+  location: Atlanta
+  date: 2011-09-01
+  slides: talks/georgia_tech_2011.pdf
+  image: images/EWA.png
+  categories:
+   - aggregation
+   - affine estimators
+   - SURE
+   - Exponential weights
+
+
+- title: NL-Means, reprojections et patchs adaptatifs
+  date: 2011-01-28
+  slides: talks/map5.pdf
+  image: images/camera.png
+  categories:
+    - image processing
+    - non-local methods
